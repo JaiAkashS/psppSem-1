@@ -1,0 +1,13 @@
+import matplotlib.pyplot as ma
+ma.xlabel('name')
+ma.ylabel('marks')
+name=('ash','sam','ram')
+marks=(75,87,100)
+ma.subplot(3,1,1)
+ma.suptitle('students marks')
+ma.bar(name,marks)
+ma.subplot(3,1,2)
+ma.scatter(name,marks)
+ma.subplot(3,1,3)
+ma.plot(name,marks)
+ma.show()
