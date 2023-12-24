@@ -5,3 +5,9 @@ screen.fill((0, 0, 0))
 pygame.draw.rect(screen, (255,255,255), [75, 10, 50, 20], 2)
 pygame.draw.rect(screen, (255,0,0), [75, 150, 150,75]) 
 pygame.display.flip() 
+running = True
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+pygame.quit()
