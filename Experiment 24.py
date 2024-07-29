@@ -7,9 +7,12 @@ black=0,0,0
 white=255,255,255
 screen=pygame.display.set_mode(size)
 pygame.display.set_caption('BOUNCING BALL')
-ball=pygame.image.load("2705.png")
+
+ball=pygame.image.load("ball.jpeg")
 ballrect=ball.get_rect()
+
 Clock=pygame.time.Clock()
+
 while True:
     for event in pygame.event.get():
         if event.type==QUIT:
@@ -21,6 +24,6 @@ while True:
     if ballrect.top<0 or ballrect.bottom>height:
         speed[1]=-speed[1]
     screen.fill(white)
-    screen.blit(ball,ballrect) 
+    screen.blit(ball,ballrect)
     pygame.display.flip()
     Clock.tick(60)
